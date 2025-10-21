@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Postulación Mecánicos LBRP</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #222;
+    }
+    .section-title {
+        font-size: 1.3em;
+        font-weight: 500;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+    }
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: 500;
+    }
+    input[type="text"], input[type="number"], select, textarea {
+        width: 100%;
+        padding: 10px 12px;
+        margin-top: 6px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+        box-sizing: border-box;
+    }
+    textarea { resize: vertical; }
+    .checkbox-group { margin-top: 10px; }
+    input[type="checkbox"] { margin-right: 8px; }
+    button {
+        display: block;
+        width: 100%;
+        padding: 14px 0;
+        margin-top: 25px;
+        font-size: 1.1em;
+        font-weight: 500;
+        color: #fff;
+        background-color: #a53c2f;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    button:hover { background-color: #ff3b1f; }
+    hr { border: none; border-top: 1px solid #ccc; margin: 25px 0; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Postulación Mecánicos LBRP</h1>
+    <form id="mechanicForm">
+
+        <!-- Sección 1: Datos -->
+        <div class="section-title">1️⃣ Datos del Postulante</div>
+        <label for="nameIC">Nombre IC:</label>
+        <input type="text" id="nameIC" name="nameIC" required>
+
+        <label for="nameOOC">Nombre OOC:</label>
+        <input type="text" id="nameOOC" name="nameOOC" required>
+
+        <label for="ageIC">Edad IC:</label>
+        <input type="number" id="ageIC" name="ageIC" required>
+
+        <label for="ageOOC">Edad OOC:</label>
+        <input type="number" id="ageOOC" name="ageOOC" required>
+
+        <label for="schedule">Horario disponible:</label>
+        <input type="text" id="schedule" name="schedule" required>
+
+        <hr>
+
+        <!-- Sección 2: Normativas -->
+        <div class="section-title">2️⃣ Conocimientos de Normativas</div>
+
+        <label>¿Qué harías si un jugador viola las normas en tu taller?</label>
+        <textarea id="rulesKnowledge" name="rulesKnowledge" rows="3" required></textarea>
+
+        <label>Selecciona las normas que consideras más importantes:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="respect" name="norms" value="Respeto a los demás jugadores">
+            <label for="respect">Respeto a los demás jugadores</label><br>
+            <input type="checkbox" id="noMG" name="norms" value="Evitar MetaGaming (MG)">
+            <label for="noMG">Evitar MetaGaming (MG)</label><br>
+            <input type="checkbox" id="noPG" name="norms" value="Evitar PowerGaming (PG)">
+            <label for="noPG">Evitar PowerGaming (PG)</label><br>
+            <input type="checkbox" id="noDM" name="norms" value="Evitar DeathMatch (DM)">
+            <label for="noDM">Evitar DeathMatch (DM)</label><br>
+        </div>
+
+        <label>Si presencias que otro jugador hace MetaGaming, ¿qué harías?</label>
+        <textarea id="norm1" name="norm1" rows="3" required></textarea>
+
+        <label>Un jugador fuerza acciones irrealistas sobre tu personaje o vehículo. ¿Qué harías?</label>
+        <textarea id="norm2" name="norm2" rows="3" required></textarea>
+
+        <label>¿Qué harías si un jugador interrumpe tu rol sin justificación?</label>
+        <select id="norm3" name="norm3" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Ignorarlo y continuar">Ignorarlo y continuar</option>
+            <option value="Advertir y educar">Advertir y educar</option>
+            <option value="Reportar al staff">Reportar al staff</option>
+        </select>
+
+        <label>Si un jugador te ataca sin rol ni motivo, ¿qué medidas tomarías?</label>
+        <select id="norm4" name="norm4" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Defenderme sin rol">Defenderme sin rol</option>
+            <option value="Ignorar y reportar">Ignorar y reportar</option>
+            <option value="Tomar represalias rol">Tomar represalias rol</option>
+        </select>
+
+        <label>¿Cuándo y cómo es apropiado reportar un problema al staff?</label>
+        <textarea id="norm5" name="norm5" rows="3" required></textarea>
+
+        <label>¿Qué pasa si no puedes cumplir tu horario como mecánico?</label>
+        <select id="norm6" name="norm6" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Aviso al líder de facción">Aviso al líder de facción</option>
+            <option value="No me preocupo">No me preocupo</option>
+            <option value="Intento cubrirlo con otro jugador">Intento cubrirlo con otro jugador</option>
+        </select>
+
+        <hr>
+
+        <!-- Sección 3: Situaciones -->
+        <div class="section-title">3️⃣ Situaciones de Rol Mecánico</div>
+
+        <label>Un jugador llega con el auto dañado gravemente, pero no tiene dinero. ¿Cómo actuarías?</label>
+        <textarea id="situation1" name="situation1" rows="3" required></textarea>
+
+        <label>Describe cómo atenderías a un cliente que hace rol conflictivo en tu taller:</label>
+        <textarea id="situation2" name="situation2" rows="3" required></textarea>
+
+        <label>¿Qué harías si un jugador intenta engañarte para obtener servicios gratis?</label>
+        <select id="situation3" name="situation3" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Informarlo al staff y negarle el servicio">Informarlo al staff y negarle el servicio</option>
+            <option value="Atenderlo igual pero advertirlo">Atenderlo igual pero advertirlo</option>
+            <option value="Ignorarlo y seguir trabajando">Ignorarlo y seguir trabajando</option>
+        </select>
+
+        <label>Un cliente llega muy apurado y exige que termines su reparación en menos tiempo del normal. ¿Cómo reaccionarías?</label>
+        <textarea id="situation4" name="situation4" rows="3" required></textarea>
+
+        <label>Dos jugadores empiezan a pelear dentro del taller. ¿Qué harías para mantener el rol adecuado?</label>
+        <select id="situation5" name="situation5" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Ignorarlo y seguir trabajando">Ignorarlo y seguir trabajando</option>
+            <option value="Separarlos y advertirlos">Separarlos y advertirlos</option>
+            <option value="Reportar inmediatamente al staff">Reportar inmediatamente al staff</option>
+        </select>
+
+        <label>Un jugador te insulta durante la reparación. ¿Cómo actuarías?</label>
+        <textarea id="situation6" name="situation6" rows="3" required></textarea>
+
+        <label>Un jugador llega con un vehículo sospechoso o ilegal. ¿Qué acciones tomarías?</label>
+        <select id="situation7" name="situation7" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Negar servicio y reportar">Negar servicio y reportar</option>
+            <option value="Atenderlo normalmente">Atenderlo normalmente</option>
+            <option value="Advertir y continuar trabajando">Advertir y continuar trabajando</option>
+        </select>
+
+        <label>Se produce un accidente en tu taller durante una reparación. ¿Qué medidas tomarías?</label>
+        <textarea id="situation8" name="situation8" rows="3" required></textarea>
+
+        <label>Notaste que otro mecánico cometió un error que podría afectar un vehículo. ¿Cómo actuarías?</label>
+        <select id="situation9" name="situation9" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Corregir el error y avisar al mecánico">Corregir el error y avisar al mecánico</option>
+            <option value="Ignorar el error">Ignorar el error</option>
+            <option value="Reportarlo al staff">Reportarlo al staff</option>
+        </select>
+
+        <hr>
+
+        <!-- Aceptación -->
+        <div class="section-title">✅ 4️⃣ Aceptación de Normativas</div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="acceptRules" name="acceptRules" required>
+            <label for="acceptRules">Acepto las normativas generales de LatinBlood RP y entiendo que puedo ser sancionado si las incumplo.</label>
+        </div>
+
+        <button type="submit">Enviar Postulación</button>
+
+    </form>
+</div>
+
+<script>
+document.getElementById('mechanicForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const webhookURL = "https://discord.com/api/webhooks/1430185593253527668/gQcD4gox1Hv8WZ8QGuzhY8ebxuZLQFYaZV_R3sKjzJ1j9CfbCFazvTlAXc_MRVK24mOK"; // <- Reemplaza con tu webhook
+
+    const nameIC = document.getElementById('nameIC').value;
+    const nameOOC = document.getElementById('nameOOC').value;
+    const ageIC = document.getElementById('ageIC').value;
+    const ageOOC = document.getElementById('ageOOC').value;
+    const schedule = document.getElementById('schedule').value;
+    const rulesKnowledge = document.getElementById('rulesKnowledge').value;
+    const norms = Array.from(document.querySelectorAll('input[name="norms"]:checked')).map(n => n.value).join(", ");
+    const norm1 = document.getElementById('norm1').value;
+    const norm2 = document.getElementById('norm2').value;
+    const norm3 = document.getElementById('norm3').value;
+    const norm4 = document.getElementById('norm4').value;
+    const norm5 = document.getElementById('norm5').value;
+    const norm6 = document.getElementById('norm6').value;
+    const situation1 = document.getElementById('situation1').value;
+    const situation2 = document.getElementById('situation2').value;
+    const situation3 = document.getElementById('situation3').value;
+    const situation4 = document.getElementById('situation4').value;
+    const situation5 = document.getElementById('situation5').value;
+    const situation6 = document.getElementById('situation6').value;
+    const situation7 = document.getElementById('situation7').value;
+    const situation8 = document.getElementById('situation8').value;
+    const situation9 = document.getElementById('situation9').value;
+    const acceptRules = document.getElementById('acceptRules').checked ? "Sí" : "No";
+
+    const payload = {
+        content: "**Nueva Postulación a Mecánicos LBRP**",
+        embeds: [{
+            title: "Postulación de " + nameIC + " (" + nameOOC + ")",
+            color: 15158332,
+            fields: [
+                { name: "Edad IC / OOC", value: ageIC + " / " + ageOOC },
+                { name: "Horario disponible", value: schedule },
+                { name: "¿Qué harías si un jugador viola las normas en tu taller?", value: rulesKnowledge },
+                { name: "Normas seleccionadas", value: norms || "Ninguna" },
+                { name: "Si presencias que otro jugador hace MetaGaming, ¿qué harías?", value: norm1 },
+                { name: "Un jugador fuerza acciones irrealistas sobre tu personaje o vehículo. ¿Qué harías?", value: norm2 },
+                { name: "¿Qué harías si un jugador interrumpe tu rol sin justificación?", value: norm3 },
+                { name: "Si un jugador te ataca sin rol ni motivo, ¿qué medidas tomarías?", value: norm4 },
+                { name: "¿Cuándo y cómo es apropiado reportar un problema al staff?", value: norm5 },
+                { name: "¿Qué pasa si no puedes cumplir tu horario como mecánico?", value: norm6 },
+                { name: "Un jugador llega con el auto dañado gravemente, pero no tiene dinero. ¿Cómo actuarías?", value: situation1 },
+                { name: "Describe cómo atenderías a un cliente que hace rol conflictivo en tu taller:", value: situation2 },
+                { name: "¿Qué harías si un jugador intenta engañarte para obtener servicios gratis?", value: situation3 },
+                { name: "Un cliente llega muy apurado y exige que termines su reparación en menos tiempo del normal. ¿Cómo reaccionarías?", value: situation4 },
+                { name: "Dos jugadores empiezan a pelear dentro del taller. ¿Qué harías para mantener el rol adecuado?", value: situation5 },
+                { name: "Un jugador te insulta durante la reparación. ¿Cómo actuarías?", value: situation6 },
+                { name: "Un jugador llega con un vehículo sospechoso o ilegal. ¿Qué acciones tomarías?", value: situation7 },
+                { name: "Se produce un accidente en tu taller durante una reparación. ¿Qué medidas tomarías?", value: situation8 },
+                { name: "Notaste que otro mecánico cometió un error que podría afectar un vehículo. ¿Cómo actuarías?", value: situation9 },
+                { name: "Acepta normativas", value: acceptRules }
+            ],
+            timestamp: new Date()
+        }]
+    };
+
+    fetch(webhookURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+    }).then(response => {
+        if(response.ok) {
+            alert("¡Postulación enviada correctamente!");
+            document.getElementById('mechanicForm').reset();
+        } else {
+            alert("Error al enviar la postulación. Revisa tu Webhook.");
+        }
+    }).catch(err => {
+        alert("Error al enviar la postulación: " + err);
+    });
+});
+</script>
+
+</body>
+</html>
